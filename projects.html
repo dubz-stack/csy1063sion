@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects</title>
 
 <style>
-    
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-header, nav {
-    background-color: var(--card);
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
     text-align: center;
-    padding: 15px;
+}
+
+nav {
+    background-color: #1f1f1f;
+    padding: 10px;
+    text-align: center;
 }
 
 nav a {
@@ -28,49 +32,65 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent);
+    color: #bb86fc;
 }
 
-main {
+.container {
     padding: 30px;
 }
 
-/* DIFFERENT GRID */
+.card {
+    background: #1f1f1f;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* FORM STYLING (SEPARATE) */
+form {
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #333;
+    border: none;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #bb86fc;
+    color: black;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #9a67ea;
+}
+
+/* PROJECT GRID (FOR PROJECT PAGE ONLY) */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.project {
-    background: var(--card);
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-
-.project img {
+.card img {
     width: 100%;
-}
-
-/* MOBILE */
-@media (max-width: 800px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+    border-radius: 5px;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>Sion Worrell</h1>
+<h1>Portfolio</h1>
 <p>My Projects</p>
 </header>
 
@@ -82,45 +102,32 @@ main {
 <a href="videodemo.html">Video Demo</a>
 </nav>
 
-<main>
+<div class="container">
 
 <h2>Portfolio Work</h2>
 
 <div class="grid">
 
-<div class="project">
-<img src="https://picsum.photos/300/200">
+<div class="card">
+<img src="images/Image1.png">
 <p>Project 1</p>
+</p> This project was a python built gui application that allowed users to create a bookstore. It featured a user-friendly interface for adding, updating, and deleting book records, as well as generating sales reports. The application was built using Tkinter. </p>
 </div>
 
-<div class="project">
-<img src="https://picsum.photos/300/201">
+<div class="card">
+<img src="images/Image2.png">
 <p>Project 2</p>
-</div>
+<p>This project involved creating a responsive website using HTML and CSS. I implemented a grid layout to showcase my work as you can see currently. </p>
 
-<div class="project">
-<img src="https://picsum.photos/300/202">
+</div>
+<div class="card">
+<img src="images/Image3.png">
 <p>Project 3</p>
-</div>
+</p> This project was a small python script that used specific code to allow users to input data and have it calculate results such as the averages of a word the length of a word etc. </p>
 
-<div class="project">
-<img src="https://picsum.photos/300/203">
-<p>Project 4</p>
-</div>
 
-<div class="project">
-<img src="https://picsum.photos/300/204">
-<p>Project 5</p>
-</div>
 
-<div class="project">
-<img src="https://picsum.photos/300/205">
-<p>Project 6</p>
-</div>
 
-</div>
-
-</main>
 
 </body>
 </html>
